@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Classes</title>
+</head>
+<body>
+	<h3> Classes </h3>
+	<script type="text/javascript">
+		class student{
+			
+			constructor(){
+				document.writeln("created one object \n");
+			}
+
+		}
+		var s1 = new student();
+		var s2 = new student();
+
+		//anonymus classes(class expressions), even for class expressions we need to create obj
+		var s3 = class{
+			constructor(){
+				document.writeln("object of unnameed class \n");
+			}
+		};
+
+		var o = new s3();
+
+		//named class expression
+		var e1 = class employee{
+				constructor(){
+					document.writeln("named class-- employee \n")
+				}
+		};
+
+		var e1ob = new e1();
+
+	</script>
+
+</body>
+</html>

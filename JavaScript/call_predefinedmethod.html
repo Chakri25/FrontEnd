@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Call Method</title>
+</head>
+<body>
+
+<h3>Call Method</h3>
+
+<script type="text/javascript">
+	//parent function
+	var student = {
+		m: 100,
+		c: 100,
+		s: 60,
+		total: function(){
+			return this.m+this.c+this.s;
+		},
+		avg: function(n_sub){
+			console.log(this);
+			return this.total()/n_sub;
+		},
+		display: function(){
+			document.writeln(this.total()+"<br>");
+		}
+	};
+	student.display();
+	document.writeln(student.avg(3)+"<br>");
+
+	//creating same object as student, but only with two values just to test
+	var student_ob1 = {
+		m: 30,
+		c: 40
+	};
+	//accessing the student function using call() from student_ob1
+	//document.writeln(student.total.call(student_ob1)+"<br>");
+
+	//with all values
+	var student_ob1 = {
+		m: 30,
+		c: 40,
+		s: 10
+	};
+	//accessing the student function using call() from student_ob1
+	document.writeln(student.total.call(student_ob1)+"<br>");
+
+	//calling obj with arguments, we get error because this represent to student_ob1
+	//document.writeln(student.avg.call(student_ob1, 3)+"<br>");
+
+	//apply method
+	document.writeln(student.total.apply(student_ob1)+"<br>");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Functions with arguments</title>
+</head>
+<body>
+<script type="text/javascript">
+	function sample(name){
+		document.writeln("hello "+name);
+	}
+	sample("Harini");
+
+	var ob = {"greet": "hello"};
+	console.log("before change");
+	console.log(ob);
+	function sampleob(ob){
+		ob["other"] = "admksba";
+	}
+	sampleob(ob);
+	console.log("after change");
+	console.log(ob);
+</script>
+</body>
+</html>

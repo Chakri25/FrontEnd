@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>static methods</title>
+</head>
+<body>
+<h3>static methods</h3>
+
+<script type="text/javascript">
+	class student{
+		constructor(marks){
+			this.marks = marks;
+			document.writeln("created an object");
+		}
+		
+		static lessthan(a, b){
+			return a.marks < b.marks;
+		}
+	}
+	var s1 = new student(90);
+	var s2 = new student(98);
+	document.writeln(student.lessthan(s1, s2));
+</script>
+
+</body>
+</html>

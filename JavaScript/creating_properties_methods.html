@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Creating prop and methods</title>
+</head>
+<body>
+
+<h3>Methods and properties</h3>
+
+<script type="text/javascript">
+	var studentmarks={
+		math : 100,
+		science: 60,
+		social: 60,
+		computer: 100,
+		totalmarks: function(){
+			return this.math + this.science + this.social + this.computer;
+		}
+	}
+	//invoking object method
+	document.writeln(studentmarks.totalmarks());
+	var ob = { firstname: "chakri", lastname: "pamulapati",
+	name: function(){
+    return this.firstname + this.lastname;
+    }
+    }
+    
+ document.writeln(ob.name());
+</script>
+
+</body>
+</html>

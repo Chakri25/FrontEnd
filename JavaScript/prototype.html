@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Prototype</title>
+</head>
+<body>
+<h4>Protoypes</h4>
+<script type="text/javascript">
+	// prototype
+	function person(n,a){
+		this.name = n;
+		this.age = a;
+		//adding method
+		this.display = function(){
+			document.writeln(n+" "+a+"<br>");
+		}
+	}
+	//accessing properties from prototype
+	var p1 = new person("chakri ", 23);
+	var p2 = new person("harini", 18);
+	document.writeln(p1.name+" "+p1.age+"<br>");
+	//accessing methods from prototype
+	p2.display();
+
+	//adding properties to prototype objects
+	p1.realintial = "pamulapati";
+	document.writeln("After adding property <br>"+p1.realintial+"<br>");
+
+	//adding method to prototype objects
+	p1.getrealintial = function(){
+		return this.realintial;
+	}
+	document.writeln(p1.getrealintial()+"<br>");
+
+	//we can not add properties and method to a protoype itself(using the above syntax)
+	person.new = "new";
+	var n = new person;
+	document.writeln(n.new+"<br>");
+
+	//but we can add using prototype keyword
+	person.prototype.new = "new";
+	var n1 = new person;
+	document.writeln(n1.new+"<br>");
+	//i thought the new methods and properties will availabe to only new objects created after adding those properties and methods to the prototpye. But no, we can acess for old objects also.
+	document.writeln(n.new+"<br>");
+
+	//in the same way, we can add methods to a prototype
+	person.prototype.newfunction = function(){
+		document.writeln("new method to the prototye (default for all objects");
+	}
+	n1.newfunction();
+
+
+
+</script>
+</body>
+</html>
