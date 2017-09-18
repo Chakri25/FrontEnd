@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Selectors</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    $("#all_button").click(function(){
+	        $("*").hide();
+	    });
+	});
+
+	//for p elements
+	$(document).ready(function(){
+		$("#p_button").click(function(){
+			$("p").hide();
+		});
+	});
+
+	//the even and odd for li behaves differently, if it is even then all even ul's delete their all even li's and all odd ul's delete their odd li's... if it is odd then all odd ul's delete all even li's and all even ul's delete their all odd li's.
+	$(document).ready(function(){
+		$("#li_e_button").click(function(){
+			$("li:odd").hide();
+		});
+	});
+
+	//first child of every ul
+	$(document).ready(function(){
+		$("#all_li_first_button").click(function(){
+			$("ul li:first-child").hide();
+		});
+	});
+
+	//first child of first ul
+	$(document).ready(function(){
+		$("#1st_ul_li_first_button").click(function(){
+			$("ul li:first").hide();
+		});
+	});
+
+
+	</script>
+
+</head>
+<body>
+
+<h1>I can hide as h1 element</h1>
+<p> I too can hide, p element</p>
+<ul>
+<li>this is first li</li>
+<li>this is second li</li>
+<li>this is third li</li>
+</ul>
+
+<ul>
+<li>second, this is first li</li>
+<li>second, this is second li</li>
+<li>second, this is third li</li>
+</ul>
+
+<ul>
+<li>third, this is first li</li>
+<li>third, this is second li</li>
+<li>third, this is third li</li>
+</ul>
+
+<a href="#" target="_blank" alt="display alternative">this is reference</a><br>
+<img src="sample.jpg" alt="alternate image" >
+<br><br><br>
+<!--Buttons -->
+<button title="All elements" id="all_button">Click me *</button>
+
+<button title="Only p elements" id="p_button">Click me p</button>
+
+<button title="li even elements" id="li_e_button">Click me li_even</button>
+
+<button title="all uls first child" id="all_li_first_button">Click me first li of all ul</button><br><br>
+
+<button title="first ul first child" id="1st_ul_li_first_button">Click me first li of first ul</button>
+
+</body>
+</html>

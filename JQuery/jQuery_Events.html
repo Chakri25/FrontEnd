@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Events</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("h1").click(function(){
+				$(this).hide();
+			});
+			$("ul").mousedown(function(){
+				alert("mousedown element");
+			});
+			$("ul").mouseup(function(){
+				alert("mouseup element");
+			});
+			$("input").on({
+				focus: function(){
+					$(this).css("background-color", "green");
+				},
+				blur: function(){
+					$(this).css("background-color", "grey");
+				}
+			});
+			/*
+			$("input").focus(function(){
+				$(this).css("background-color", "green");
+			});
+			$("input").blur(function(){
+				$(this).css("background-color", "grey");
+			});*/
+		});
+	</script>
+
+</head>
+<body>
+
+<h1>I can hide as h1 element, you can click me</h1>
+<p> I too can hide, p element. This is a paragraph.
+this is a statmenet.this is a statmenet.</p>
+<ul>
+<li>this is first li</li>
+<li>this is second li</li>
+<li>this is third li</li>
+</ul>
+
+<ul>
+<li>second, this is first li</li>
+<li>second, this is second li</li>
+<li>second, this is third li</li>
+</ul>
+
+<ul>
+<li>third, this is first li</li>
+<li>third, this is second li</li>
+<li>third, this is third li</li>
+</ul>
+
+<a href="#" target="_blank" alt="display alternative">this is reference</a><br>
+<img src="sample.jpg" alt="alternate image" >
+<br><br><br>
+
+Name: <input type="text" name="feild1">
+
+<!--Buttons -->
+<!--
+<button title="All elements" id="all_button">Click me *</button>
+
+<button title="Only p elements" id="p_button">Click me p</button>
+
+<button title="li even elements" id="li_e_button">Click me li_even</button>
+
+<button title="all uls first child" id="all_li_first_button">Click me first li of all ul</button><br><br>
+
+<button title="first ul first child" id="1st_ul_li_first_button">Click me first li of first ul</button>
+
+</body>
+</html>
