@@ -1,0 +1,66 @@
+===================================BOOTSTRAP=======================================
+Bootstrap::: It is a free, open-source and is the most popular HTML, CSS and JavaScript framework developed
+by twiter for creating responsive web applications.
+
+Advantages---
+1. Supports responsive design-- means it adopts to all the screen sizes laptop, tablets, mobiles.. It provides optical viewing and interaction experience.
+ easy scrolling and navigations.
+2. saves lot of development time-- it offers ready made codes for us(there is no need to write code from scratch)
+3. consistence-- company can give a centralized code of bootstrap
+4. customizable-- you can unselect or select the features and use only those.
+5. support-- we can get easy and fast support.
+
+Grid System:::
+It is used for creating page layouts through a series of rows and columns. It consists of 12 columns.
+
+1. 3 column layout using grid system( 2:8:2)
+leftside bar, main content area, right side bar
+
+Bootstrap grid classes are divided as per the devices:
+mobile devices-- .col-xs-*
+tablets-- .col-sm-*
+Desktops-- .col-md-*
+large desktops-- .col-lg-*
+
+To create a grid layout, we need to follow three simple steps:
+1. create container in a divided
+2. create a row within container
+3. create 3 columns in a row(*- number of columns u need in each block)
+
+**to get good layout we need to add container then inside it row and then below the column class.
+
+If we use one device column class, then it automatically sets for the larger and smaller devices than that.
+If we need specifically for larger or smaller, we need to add that class coulmn.
+
+Grid Column Offset:::
+when creating website layouts using the grid system, you may want to move grid columns to the right for 
+alignmnet purpose.
+we have Bootstrap Offset Classes like--
+.col-xs-offset-*
+.col-sm-offset-*
+.col-md-offset-*
+.col-ls-offset-*
+
+If we need 2 cols in one row and 4 in another, we can use two div's. But if we need to center the two
+columns in first row, then we need offset required number of columns.
+
+**rows and columns can be placed inside an exsiting column.
+
+Bootsrap classes on images::
+img-responsive, image will resize itself in according to all devices.
+pull-left, image pulled to the left and the text will then flow around the image.
+pull-right, image pulled to the right and the text will then flow around the image.
+center-block, image will be centered.
+
+Bootstrap responsive utility classes:: Bootstrap responsive utility classes are usefull for showing and hiding by device via media query.
+
+
+
+
+
+
+
+
+
+
+

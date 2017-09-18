@@ -1,0 +1,109 @@
+==================================JQUERY==============================================
+Jquery is a library in JavaScript.
+Its main objectives--
+1. making simpler to write syntactically.
+2. managing the cross-browser compatability. dealing with cross-browser issues like chrome, firefox, mobile-versions of browsers.
+
+Jquery lets you to manipulate dom. js have access to manipulate html. DOMO is tree like structure.
+Jquery makes it easy to see dom elements and to manipulate tose elements.
+
+syntax: $(seletor).action()
+It selects HTML elements and performs some action on the elements.
+
+1. $- defines jquery
+2. selector-- to query or find HTML elements
+3. action- to be performed on the elements
+
+Document Reay Event:::
+$(document).ready(function(){//jquery methods });
+The ready event helps to prevent any code running before the document is finished loading.
+The shortcut is $(function){//jquery methods});
+
+JQuery Selectors:::
+jQuery selectors are used to find HTML elements based on their name, id, classes, types, attributes, values of attributes.
+It is based on existing CSS Selectors /and come own custom selectors.
+All selectors in jQuery start with the dollar sign and parentheses: $().
+
+Types of selectors--
+1.The element selector:
+syntax:- $("element") //you can select all elements 
+ex: $("p") //all p elements can be selected
+
+2. The #id selector:
+An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.
+syntax:- $("#idname")
+
+3. The .class Selector:
+To find elements with a specific class, write a period character, followed by the name of the class.
+syntax:- $(".classname")
+
+other selectors::
+1. $("*")-- all elements
+2. $(this)-- current HTML element
+3. $("p.intro")-- p with class "intro"
+4. $("p:first")-- select first p element
+5. $("ul li:first")-- first element of li in first ul.
+6. $("ul li:first-child")-- first element in li in every ul.
+7. $("[href]")-- selects all elements with an href attribute.
+8. $("a[target='_blank']")-- selects all elements with a target attribute value equal to "_blank".
+	if $("a[target != '_blank']"), then it slects other than _blank.
+9. $(":button")-- selects all button elements and input elements of type button.
+10. $("tr:even")-- selects all tr even elemtns
+	if $("tr:odd")-- selects all odd tr elements.
+
+sample example for external jquery code in js:
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="my_jquery_functions.js"></script>
+</head>
+
+jQuery Event Methods:::
+An event represents the precise moment when something happens. All the different vistors actions that a web
+page can respond to are called events.
+
+Types of events--
+$(document).ready()-- method allows us to execute a function when the document is fully loaded.
+1. Mouse Events:-
+click():: This method attached an even handler function to an HTML element. The function indide it 
+is executed when user clicks on html element.
+ex: $("p").click(function(){ $(this).hide();});
+
+dblclick():: this function is executed when the user double-clicks on the HTML element.
+ex: $("p").dblclick(function(){ $(this).hide(); });
+
+mouseenter():: the function is executed when the mouse pointer enters the HTML element.
+ex: $("#p1).mouseenter(function(){ alert("you entered p1!"); });
+
+mouseleave():: this functions is executed when the pointer leaves the HTML element.
+
+mousedown():: this function is executed, when the left, middle or right mouse button is pressed down, 
+while the mouse is over the HTML element.
+
+mouseup():: this function is executed, when the left, middle or right mouse button is released, while
+the mouse is over the html element.
+
+hover():: the first function is executed when the mouse enters the HTML element, and the second function
+is executed when the mouse leaves the html element. 
+
+2. Form Events:-
+
+focus():: the function is executed when the form field gets focus.
+ex: $(input").focus(function(){ $(this).css("background-color", "#ccccc"); });
+
+blur():: the function is executed when the form field loses focus.
+ex: $("input").blur(function(){ $(this).css("background-color", "#fffff"); });
+
+on():: on() method attaches one or more event handlers for the selected elements. Attach a click event to a <p> element.
+$("p").on("click", function(){ $(this).hide(); });
+
+othee example on on() method to show it can attach multiple event handlers to an eleemnt:-
+$("p").on({
+	mouseenter: function(){ $(this).css("background-color', "lightgray"); },
+	mouseleave: function(){ $(this).css("background-color", "lightbluew"); },
+	click: function(){ $(this).css("background-color", "yellow"); });
+	});
+
+
+	
+

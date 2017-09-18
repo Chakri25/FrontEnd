@@ -1,0 +1,66 @@
+===============================Angular JS=======================================
+AngularJs is a framework of javascript which is used to develop reactive single page applications.
+
+For installing--
+We can not include angular in html page because it has some features like typescript which should be activated
+before page loads. So to develop angular we need some steps to do.
+we can do this easily by CLI. CLI is node.js--server side code This hosts angular.
+
+download node.js. 
+then use terminal and follow bellow:
+1. np, install -g @angular/cli (which installs angular)
+2. ng new my-dream-app (creates new app)
+3. cd my-new-aap (go into the new app created)
+4. ng serve ( this will built server , typescript)
+
+Two-way Data binding is possible through Angular2.
+
+We are going to learn-- The basics, Components&Databinding, Directives, Sevices&Dependency Injections, 
+Routing, Observables, Forms, Pipes, HTTP, Authenitication, Optimizations & NgModules, Deployment,
+Animations & Testing.
+
+Typescript:- It is a free and open-source programming languages developed and maintained by microsoft. It is a strict syntactical superset of
+javascript and adds optional static typing to the language.
+
+Usin Bootstrap-- first install bootstrap using npm (npm instal --save bootstrap). To use it, we need to include
+bootstrap folder in .angular-cli.json. In .angular-cli.json, there is a "style" property, we need to add path of 
+bootstrap in it (../node_modules/bootstrap/dist/css/bootstrap.min.css). This is the path where bootstrap is stored 
+after the installation through npm.
+
+How angular runs html::- there are two html files. one in app which is app.component.html and other is index.html.
+The index.html is main html file, where the orgina code present. This index.html file has 
+<app-root></app-root> element in it. This element points to the selector in the component in app.component.ts file. In this,
+basically the components are developed, so this again redirects to app.component.html, app.component.css. 
+In the app.component.html, we can write html code directly.
+
+There is a main.ts file from where angular first starts its execution. In this there reference to AppModule. This links to app.module.ts file in app folder.
+This app.module.ts file contains the app.components. so, all the app.component files which are app are called and hence the html file also executed.
+
+Components::: Components are simple blocks on a html page. We can have header as a component, main content as a component and
+side content as a component. Basically, we can develop every component separately without squezing it up in a large file.
+And this also helps us to reuse the components easily.
+
+The app.component is the root component.
+The selectors which we add newly will added inti app.component.html not the index.
+
+Now we will create a new component which tells about server. 
+So, first add a folder name server inside the app. This is good beacuse all the apps will reside int his app folder.
+Inside the server create a file called server.component.ts (which is typescript file).
+So in this we will create a class. 
+this is the typescript class which gives a blueprint to angular. So that angular creates objects and use from it.
+export keyword should be used before the class because it will be accessed from ap.component.html.
+
+To know that this class is a component by the angular, we need to add decorator on it which is @Component({}).
+this component is not known by the typescript. so we need to import using syntax-- import { Component } from '@angular/core';.
+
+we need to configure the component as follows:
+we need to add meta data-- angular will know what to dod with this code.
+In this one imp info is selector-- html tag, we can use this in other components.
+other is templateUrl where we need to point the path of html file. We need to define the html file in the same server folder.
+
+The above is totaly tells how to create, but to use it we need to change app.module.ts.
+** Angular uses components to build web pages and modules to bundel different ts's.
+We need to add our server component to the app.module.ts in declarations and import it.
+
+--creating components using terminal
+ng generate component newcomponentname.

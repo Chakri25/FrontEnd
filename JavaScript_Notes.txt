@@ -1,0 +1,121 @@
+JavaScript Concepts----------------------------------------------
+1. Js variables and scope:::
+scope -- two types-- local and global
+global-- this and window are two global variables present for any js file. this contains all the global variables including window.
+local-- if we declare any variables inside function those are called local variables.
+
+js variables are dynamically type which means there is no need to specify what type of variable you are using.
+
+2. JS Data Types::::
+primitive data types in js-- undefined (represents lack of existance, we can not use undefined to set value for a variable)
+			     boolean (true or false)
+			     Null (null represents lack of existance)
+			     string (set of chracters)
+difference between null and undefined: when a variable is declared undefined is automatically seto to it.
+There are no boolean, number, string identifiers.
+
+typeof-- typeof "string" returns string data type
+if you want to check datatype---- typeof "something" === "string" -- then it returns true.
+
+3. creating functions with no arguments::: 
+All functions are objects.
+funtion functionname(){
+//code
+}
+
+4. creating functions with arguments:::
+all primitive types are passedonly by value.
+all objects are passed by reference.
+
+5. JavaScript Classes:::
+classes are introduced by ecmascript2015, are primarily syntactical sugar over exsitingting prototype-based inheritance.
+
+class syntax has two components: class expression and class declarations.
+
+class declaration-- to declare a class, you use class keyword with the name of the class.
+ex: class Rectangle{
+		constructor(h, w){
+		this.h = h;
+		this.w = w;
+		}
+	}
+Hoisting-- An importance difference between function declarations and clas declarations is that function
+declarations are hoisted and class declarations are not. you first need to declare your class and then access it,
+otherwise the code will throw a RefernceError.
+ex: var p =  new Rectangle(); // throws RefernceError
+	class Rectangle{// stmts of class}
+Class Expressions-- class expressions is another way to define a class. class expressions can be named
+or unnamed. The name given to a named class expression is local to the class's body.
+ex: var Rectangle = class{//code};
+	var Rectangle = class Rectangle{//code};
+**code expressions also suffer from the same hoisting issues mentioned for class declarations.
+
+class body and method definitions:::  The bodies of class declarations and expressions are executed
+in strict mode( constructor, static and property methods, getter and setter functiona are executed in strict mode)
+
+constructor-- The constructir method is a special method for creating and intializing an iv=bject with a class.
+A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method.
+** A constructor can use super keyword to call the constructor of a parent class.
+
+static methods::: The static keyword defined a static method for a class. Static methods are called without instantiating 
+their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application.
+
+
+6. creating properties::::
+we can create properties for an object in two ways-- dot and brackets
+objectname.property;
+objectname["property"];
+obnjectname[expression];
+
+deleting properties--
+delete objectname.property;
+the delete keyword deletes both the value of the property and the property itself.
+the delete operator us designed to be used on object properties. It had no variables or functions.
+the delete operator should not be used on predefined js object properties. It can crash ur application.
+
+7. creating methods:::
+javascript methods are the actions that can be performed on objects.
+a javascript method is a property containing a function definition.
+Methods are functions stored as object properties.
+
+creating object method with the following syntax--
+methodname : function(){//code}
+you can access it as--
+objectname.methodName()
+
+8. JavaScript Object Prototypes:::
+Every js object has a prototype. The prototype is also an object.
+All Js objects inherit their properties and methos from their prototype.
+
+The standard way to create an object prototype is to use an object constructor [function:::
+function person(f, l, a){
+this.f = f;
+this.l=l;
+this.a=a;
+}
+
+var ob = new person("jhon", "doe", 30);
+
+Adding properties and methods to an object is easy, we can do it directly using object--
+ob.newproperty = "value"
+ob.newmethod = function(){ //code }
+
+Adding properties and methods to a prototype is different, we can do this by using prototype keyword--
+propertyname.property = "value"
+propertyname.property = function(){//code}
+
+***you can not add a new property to a prototype the same way as you add a new property to an existing
+object, because the prototype is not an existing object.
+If you add the properties and methods to a prototype, it sets default values for all the objects created
+from that prototype.
+
+9. Function call::: call() is a predefined method.
+It can be used to invoke a function with an owner object as the first argument.
+***with call(), you can use a method belonging to another object.
+
+syntax-- parentobject.method.call(newobject);
+
+apply() method::: aplly method is smiliar to call method. The only difference is casll() takes any function
+arguments separately but apply() takes any function arguments as an array.
+
+	
