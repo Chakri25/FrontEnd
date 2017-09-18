@@ -1,0 +1,11 @@
+.customDiv{
+	margin-bottom: 5px;
+	background-color: grey;
+	font-size: 13px;
+	border: 2px solid black;
+	min-height: 300px;
+	text-align: center;
+}
+img{
+	margin-bottom: 5px;
+}
